@@ -1,0 +1,16 @@
+﻿<html>
+<head>
+    <title>{{ title }}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
+</head>
+<body>
+    {% extends "HelloDjangoApp/layout.html" %}
+    {% block content %}
+    {{ content }}
+    {% endblock %}
+
+
+</body>
+
+</html>

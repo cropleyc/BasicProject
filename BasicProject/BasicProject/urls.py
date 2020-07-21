@@ -30,6 +30,9 @@ import HelloDjangoApp.views
 
 # Django processes URL patterns in the order they appear in the array
 urlpatterns = [
+    url(r'^about$', HelloDjangoApp.views.about, name='about'),
     url(r'^$', HelloDjangoApp.views.index, name='index'),
-    url(r'^home$', HelloDjangoApp.views.index, name='home'),
-]
+    url(r'^home$', HelloDjangoApp.views.index, name='home')
+    
+    
+    ]

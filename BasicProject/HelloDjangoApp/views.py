@@ -14,3 +14,13 @@ def index(request):
     html_content += "</body></html>"
 
     return HttpResponse(html_content)
+
+def about(request):
+    return render(
+        request,
+        "HelloDjangoApp/about.html",
+        {
+            'title' : "About HelloDjangoApp",
+            'content' : "Example app page for Django."
+        }
+    )
