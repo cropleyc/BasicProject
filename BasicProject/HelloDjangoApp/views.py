@@ -3,5 +3,14 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+
+from datetime import datetime
+
 def index(request):
-    return HttpResponse("Hello, Django!")
+    now = datetime.now()
+
+    html_content = "<html><head><title>Hello, Django</title></head><body>"
+    html_content += "<strong>Hello Django!</strong> on " + now.strftime("%A, %d %B, %Y at %X")
+    html_content += "</body></html>"
+
+    return HttpResponse(html_content)
